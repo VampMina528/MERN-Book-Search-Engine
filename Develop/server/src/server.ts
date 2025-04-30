@@ -17,7 +17,7 @@ const server = new ApolloServer({
 });
 
 await server.start();
-server.applyMiddleware({ app });
+server.applyMiddleware({ app: app as any });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -33,3 +33,4 @@ app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
   console.log(`GraphQL available at http://localhost:${PORT}${server.graphqlPath}`);
 });
+
