@@ -2,22 +2,20 @@ import express from 'express';
 const router = express.Router();
 import {
   createUser,
-  getSingleUser,
-  saveBook,
-  deleteBook,
   login,
+  // saveBook,
+  // getSingleUser,
+  // deleteBook,
 } from '../../controllers/user-controller.js';
 
-// import middleware
-import { authenticateToken } from '../../services/auth.js';
+// Legacy note: These REST routes are now replaced by GraphQL.
+// If you ever re-enable them, reimport `authenticateToken` from your auth service and restore the routes.
 
-// put authMiddleware anywhere we need to send a token for verification of user
-router.route('/').post(createUser).put(authenticateToken, saveBook);
+// router.route('/').post(createUser).put(authenticateToken, saveBook);
+// router.route('/me').get(authenticateToken, getSingleUser);
+// router.route('/books/:bookId').delete(authenticateToken, deleteBook);
 
+router.route('/').post(createUser);
 router.route('/login').post(login);
-
-router.route('/me').get(authenticateToken, getSingleUser);
-
-router.route('/books/:bookId').delete(authenticateToken, deleteBook);
 
 export default router;

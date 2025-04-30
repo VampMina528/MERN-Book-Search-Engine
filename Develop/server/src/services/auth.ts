@@ -1,4 +1,3 @@
-import type { Request } from 'express';
 import jwt from 'jsonwebtoken';
 
 import dotenv from 'dotenv';
@@ -11,18 +10,19 @@ interface JwtPayload {
 }
 
 // create token
-export const signToken = (username: string, email: string, _id: unknown) => {
+export const signToken = (user: { username: string; email: string; _id: unknown }) => {
+  const { username, email, _id } = user;
   const payload = { username, email, _id };
-  const secretKey = process.env.JWT_SECRET_KEY || '';
+  const secretKey = process.env.JWT_SECRET || '';
 
   return jwt.sign(payload, secretKey, { expiresIn: '1h' });
 };
 
 // authenticate token for GraphQL
-export const authMiddleware = ({ req }: { req: Request }) => {
-  let token = req.body.token || req.query.token || req.headers.authorization;
+export const authMiddleware = (req: any) => {
+  let token = req.body?.token || req.query?.token || req.headers?.authorization;
 
-  if (req.headers.authorization) {
+  if (req.headers?.authorization) {
     token = token.split(' ').pop()?.trim();
   }
 
@@ -31,7 +31,7 @@ export const authMiddleware = ({ req }: { req: Request }) => {
   }
 
   try {
-    const secretKey = process.env.JWT_SECRET_KEY || '';
+    const secretKey = process.env.JWT_SECRET || '';
     const decoded = jwt.verify(token, secretKey) as JwtPayload;
     req.user = decoded;
   } catch {

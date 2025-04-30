@@ -1,5 +1,5 @@
-import { User } from '../models/index.js'; 
-import { signToken } from '../utils/auth.js';
+import User from '../models/index.js'; 
+import { signToken } from '../services/auth.js';
 import { AuthenticationError } from 'apollo-server-express';
 
 const resolvers = {
