@@ -1,7 +1,7 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import path from 'path';
-import { typeDefs, resolvers } from './schemas/index';
+import { typeDefs, resolvers } from './schemas/index.js';
 import { authMiddleware } from './services/auth.js';
 import dotenv from 'dotenv';
 
