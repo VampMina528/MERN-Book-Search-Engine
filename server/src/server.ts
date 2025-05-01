@@ -1,11 +1,16 @@
 import express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { typeDefs, resolvers } from './schemas/index.js';
 import { authMiddleware } from './services/auth.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -13,10 +18,12 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: ({ req }: any) => ({ user: authMiddleware(req) })
+  context: ({ req }: any) => ({ user: authMiddleware(req) }),
+  cache: 'bounded',
 });
 
 await server.start();
+
 server.applyMiddleware({ app: app as any });
 
 app.use(express.urlencoded({ extended: false }));
@@ -33,4 +40,3 @@ app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
   console.log(`GraphQL available at http://localhost:${PORT}${server.graphqlPath}`);
 });
-
