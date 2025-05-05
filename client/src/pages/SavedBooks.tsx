@@ -2,7 +2,6 @@ import { useQuery, useMutation } from '@apollo/client';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 import { GET_ME } from '../graphql/queries';
 import { REMOVE_BOOK } from '../graphql/mutations';
-// import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
@@ -17,7 +16,6 @@ const SavedBooks = () => {
         variables: { bookId },
       });
 
-      // Remove from localStorage and refresh data
       removeBookId(bookId);
       refetch();
     } catch (err) {
