@@ -6,11 +6,19 @@ This full-stack MERN application allows users to search for books using the Goog
 
 ## ✅ Completed Requirements Checklist
 
--
+* [x] Apollo Server setup with GraphQL queries and mutations
+* [x] JWT authentication middleware adapted for GraphQL
+* [x] Apollo Client with `useQuery` and `useMutation` on the frontend
+* [x] Functional Google Books API integration
+* [x] User login/signup functionality via GraphQL
+* [x] Save and remove books from user account
+* [x] Deployed on Render with MongoDB Atlas
+* [x] Clean and responsive UI using React Bootstrap
 
 ## 🚀 Deployed Application
 
-**Frontend & GraphQL API**: [https://googlebooks-backend.onrender.com](https://googlebooks-backend.onrender.com)
+**Frontend & GraphQL API**:
+[https://googlebooks-backend.onrender.com](https://googlebooks-backend.onrender.com)
 
 ## 💻 GitHub Repository
 
@@ -18,15 +26,15 @@ This full-stack MERN application allows users to search for books using the Goog
 
 ## 🔧 Technologies Used
 
-- MongoDB + Mongoose
-- Express.js
-- React + Vite + TypeScript
-- Node.js
-- Apollo Server + Client
-- GraphQL
-- JWT Authentication
-- Google Books API
-- React Bootstrap
+* MongoDB + Mongoose
+* Express.js
+* React + Vite + TypeScript
+* Node.js
+* Apollo Server + Client
+* GraphQL
+* JWT Authentication
+* Google Books API
+* React Bootstrap
 
 ## 📂 Folder Structure
 
@@ -37,7 +45,7 @@ server/           # Backend Node/Express/GraphQL API
         ├── models/        # Mongoose models (User, Book)
         ├── schemas/       # GraphQL typeDefs & resolvers
         ├── services/      # Authentication middleware
-        └── server.ts     # Main server file
+        └── server.ts      # Main server file
 ```
 
 ## 🛠️ Installation
@@ -67,14 +75,15 @@ MONGODB_URI=your_mongodb_connection
 ```bash
 npm run develop
 ```
-## Screenshot
-![Screenshot](<assets/Screenshot search for books.jpg>)
+
+## 🗀️ Screenshot
+
+![Screenshot](./assets/Screenshot%20search%20for%20books.jpg)
 
 ## 🤝 Credits
 
-University of Kansas
+University of Kansas Bootcamp
 
 ## 📄 License
 
 This project is licensed under the MIT License.
-
