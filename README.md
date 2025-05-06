@@ -75,6 +75,8 @@ MONGODB_URI=your_mongodb_connection
 ```bash
 npm run develop
 ```
+## Walkthrough Video
+[Watch the walkthrough here](#) <!-- placeholder to be replaced after recording -->
 
 ## 🗀️ Screenshot
 
@@ -83,6 +85,9 @@ npm run develop
 ## 🤝 Credits
 
 University of Kansas Bootcamp
+
+## Contributors
+- Mina Draper-Hammond [GitHub](https://github.com/VampMina528)
 
 ## 📄 License
 
