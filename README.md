@@ -76,7 +76,7 @@ MONGODB_URI=your_mongodb_connection
 npm run develop
 ```
 ## Walkthrough Video
-[Watch the walkthrough here](#) <!-- placeholder to be replaced after recording -->
+[Watch the walkthrough here](#) 
 
 ## 🗀️ Screenshot
 
