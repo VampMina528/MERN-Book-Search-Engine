@@ -1,6 +1,6 @@
 import User from '../models/User.js';
-import { signToken } from '../services/auth.js';
-import { AuthenticationError } from 'apollo-server-express';
+import { signToken, AuthenticationError} from '../services/auth.js';
+
 
 const resolvers = {
   Query: {
@@ -25,13 +25,13 @@ const resolvers = {
         throw new AuthenticationError('Incorrect credentials');
       }
 
-      const token = signToken(user);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
 
     addUser: async (_parent: any, args: any) => {
       const user = await User.create(args);
-      const token = signToken(user);
+      const token = signToken(user.username, user.email, user._id);
       return { token, user };
     },
 
