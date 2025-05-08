@@ -1,93 +1,128 @@
-# MERN Book Search Engine
+# 📚 MERN Book Search Engine
 
-## 📚 Description
+## Description
 
-This full-stack MERN application allows users to search for books using the Google Books API, create an account, log in, and save books to their personal collection. It demonstrates the integration of a React frontend with a GraphQL/Apollo backend, authentication using JWT, and persistent user data using MongoDB.
+This full-stack MERN application allows users to search for books using the Google Books API, create an account, log in, and save books to their personal collection. It features a React frontend powered by Apollo Client, a GraphQL/Apollo Server backend, JWT authentication, and MongoDB Atlas for persistent user data.
 
-## ✅ Completed Requirements Checklist
+---
 
-* [x] Apollo Server setup with GraphQL queries and mutations
+## ✅ Features Completed
+
+* [x] Apollo Server with GraphQL queries and mutations
 * [x] JWT authentication middleware adapted for GraphQL
-* [x] Apollo Client with `useQuery` and `useMutation` on the frontend
-* [x] Functional Google Books API integration
-* [x] User login/signup functionality via GraphQL
-* [x] Save and remove books from user account
-* [x] Deployed on Render with MongoDB Atlas
-* [x] Clean and responsive UI using React Bootstrap
+* [x] Apollo Client with `useQuery` and `useMutation`
+* [x] Google Books API integration for book searches
+* [x] User signup and login via GraphQL
+* [x] Save and remove books from user profiles
+* [x] Deployed backend and frontend on Render
+* [x] Responsive UI styled with React Bootstrap
 
-## 🚀 Deployed Application
+---
 
-**Frontend & GraphQL API**:
+## 🚀 Live Application
+
+🌐 **Frontend & GraphQL API**:
 [https://googlebooks-backend.onrender.com](https://googlebooks-backend.onrender.com)
+
+---
 
 ## 💻 GitHub Repository
 
-[https://github.com/VampMina528/MERN-Book-Search-Engine](https://github.com/VampMina528/MERN-Book-Search-Engine)
+🔗 [https://github.com/VampMina528/MERN-Book-Search-Engine](https://github.com/VampMina528/MERN-Book-Search-Engine)
 
-## 🔧 Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 * MongoDB + Mongoose
 * Express.js
-* React + Vite + TypeScript
+* React (Vite + TypeScript)
 * Node.js
-* Apollo Server + Client
+* Apollo Server + Apollo Client
 * GraphQL
 * JWT Authentication
 * Google Books API
 * React Bootstrap
 
-## 📂 Folder Structure
+---
+
+## 📁 Folder Structure
 
 ```
-client/           # Frontend React app
-server/           # Backend Node/Express/GraphQL API
+client/             # React frontend
+server/
   └── src/
-        ├── models/        # Mongoose models (User, Book)
-        ├── schemas/       # GraphQL typeDefs & resolvers
-        ├── services/      # Authentication middleware
-        └── server.ts      # Main server file
+      ├── models/          # Mongoose User & Book models
+      ├── schemas/         # GraphQL typeDefs and resolvers
+      ├── services/        # JWT authentication middleware
+      └── server.ts        # Main Express/Apollo server
 ```
 
-## 🛠️ Installation
+---
 
-1. Clone the repository:
+## ⚙️ Local Installation
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/VampMina528/MERN-Book-Search-Engine
 cd MERN-Book-Search-Engine
 ```
 
-2. Install dependencies:
+### 2. Install all dependencies
 
 ```bash
 npm run install-all
 ```
 
-3. Set environment variables: Create a `.env` file in the `server` directory:
+### 3. Set environment variables
+
+Create a `.env` file inside the `server` directory:
 
 ```env
-JWT_SECRET=your_secret_key
+JWT_SECRET_KEY=your_secret_key
 MONGODB_URI=your_mongodb_connection
 ```
 
-4. Run the app locally:
+### 4. Run the app locally
 
 ```bash
 npm run develop
 ```
-## Walkthrough Video
-[Watch the walkthrough here](#) 
 
-## 🗀️ Screenshot
+---
 
-![Screenshot](./assets/Screenshot%20search%20for%20books.jpg)
+## 🚀 Render Deployment
 
-## 🤝 Credits
+Live backend:
+[https://googlebooks-backend.onrender.com](https://googlebooks-backend.onrender.com)
 
-University of Kansas Bootcamp
+---
 
-## Contributors
-- Mina Draper-Hammond [GitHub](https://github.com/VampMina528)
+## 🎥 Walkthrough Video
+
+[📺 Watch the walkthrough here](https://www.instagram.com/reel/DJYWj6Mt82x/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
+---
+
+## 🗼️ Screenshots
+
+![Search View](./assets/Screenshot%20search%20for%20books.jpg)
+![Saved Books View](Screenshot%202025-05-07%20222057.png)
+
+---
+
+## 🧑‍🏫 Credits
+
+University of Kansas Full-Stack Coding Bootcamp
+
+---
+
+## 🙌 Contributors
+
+* Mina Draper-Hammond –
+GitHub Link for MERN Book Search Engine: https://github.com/VampMina528/MERN-Book-Search-Engine
+
+---
 
 ## 📄 License
 
